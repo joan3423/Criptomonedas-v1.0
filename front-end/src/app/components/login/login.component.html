@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="box-1">
+        <div class="box-2">
+            <div class="title">
+                Sign in
+            </div>
+            <form class="login-input-box" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <input formControlName="userName" type="text" placeholder="user name" />
+                <div class="text-danger"
+                *ngIf="loginForm.get('userName')?.hasError('required') && loginForm.get('userName')?.touched">
+                    <span>
+                        Este campo es <strong>obligatorio</strong>
+                    </span>
+                </div>
+                <input formControlName="password" type="password" placeholder="password" />
+                <div class="text-danger"
+                *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched"
+                >
+                    <span>
+                        Este campo es <strong>obligatorio</strong>
+                    </span>
+                </div>
+                <button [disabled]="loginForm.invalid" class="sign-button">
+                    SIGN IN
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
