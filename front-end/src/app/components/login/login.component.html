@@ -5,11 +5,11 @@
                 Sign in
             </div>
             <form class="login-input-box" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <input formControlName="userName" type="text" placeholder="user name" />
+                <input formControlName="email" type="text" placeholder="user name" />
                 <div class="text-danger"
-                *ngIf="loginForm.get('userName')?.hasError('required') && loginForm.get('userName')?.touched">
+                *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched">
                     <span>
-                        Este campo es <strong>obligatorio</strong>
+                        Este campo es <strong>obligatorio*</strong>
                     </span>
                 </div>
                 <input formControlName="password" type="password" placeholder="password" />
@@ -17,10 +17,10 @@
                 *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched"
                 >
                     <span>
-                        Este campo es <strong>obligatorio</strong>
+                        Este campo es <strong>obligatorio*</strong>
                     </span>
                 </div>
-                <button [disabled]="loginForm.invalid" class="sign-button">
+                <button class="sign-button">
                     SIGN IN
                 </button>
             </form>

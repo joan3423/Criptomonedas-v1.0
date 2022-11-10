@@ -1,1 +1,6 @@
-<p>dashboard works!</p>
+<div class="dashboard-box">
+    <app-user-bar></app-user-bar>
+    <app-operation-bar></app-operation-bar>
+    <app-activity-table (modalState)="setModalState($event)"></app-activity-table>
+    <app-modals [modalState]="modalState" (closeModal)="setModalState($event)"></app-modals>
+</div>

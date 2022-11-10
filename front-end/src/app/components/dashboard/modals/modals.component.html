@@ -1,0 +1,9 @@
+<div *ngIf="modalState !== 'closed'" class="modal">
+    <div class="modal-box">
+        <button (click)="setModalClose('closed')" class="close-button button-icon ">
+            <fa-icon style="padding: 6px 12px;" class="radious-icon" [icon]="faClose"></fa-icon>
+        </button>
+        <app-register-currency *ngIf="modalState === 'list-currencies'" [modalState]="modalState" (closeModal)="setModalClose($event)"></app-register-currency>
+        <app-add-currency *ngIf="modalState === 'add-currencies'"></app-add-currency>
+    </div>
+</div>

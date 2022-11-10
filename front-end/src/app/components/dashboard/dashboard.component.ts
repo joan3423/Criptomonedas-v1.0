@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  modalState = <string>("closed")
+
+  setModalState(value: string) {
+    this.modalState = value;
+    console.log(this.modalState)
+  }
 
   ngOnInit(): void {
   }
-
 }

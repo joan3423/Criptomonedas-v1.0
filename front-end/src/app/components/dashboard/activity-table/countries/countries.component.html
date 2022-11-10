@@ -1,0 +1,54 @@
+<div class="my-currencies-section">
+    <div class="title-add-button d-flex">
+        <div class="title my-currencies-title">
+            Listar países
+        </div>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        #
+                    </td>
+                    <td>
+                        Nombre del país
+                    </td>
+                    <td>
+                        Usuarios asociados
+                    </td>
+                    <td>
+                        Monedas permitidas
+                    </td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let country of countriesList">
+                    <td>
+                        {{country.id}}
+                    </td>
+                    <td>
+                        {{country.name}}
+                    </td>
+                    <td>
+                        {{country.associatedUsers.length}}
+                    </td>
+                    <td>
+                        {{country.currenciesAllowed.length}}
+                    </td>
+                    <td>
+                        <div class="d-flex options-section">
+                            <button class="button-icon">
+                                <img src="/assets/edit.png">
+                            </button>
+                            <button class="button-icon">
+                                <img src="/assets/trash.png">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

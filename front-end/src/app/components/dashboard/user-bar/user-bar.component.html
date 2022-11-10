@@ -1,0 +1,25 @@
+<div class="profile-bar">
+    <div class="profile-section">
+        <div (click)="showPorfileOptions()" class="profile-button">
+            <fa-icon class="radious-icon" style="color: white;" [icon]="faUserAlt"></fa-icon>
+            <div *ngIf="showOptions === true" class="absolute-user-list">
+                <div class="task-title d-flex">
+                    <h3>Bienvenido</h3>
+                </div>
+                <div class="task-title d-flex">
+                    <h3>ejemplo@gmail.com</h3>
+                    <div class="right-icon">
+                        <fa-icon class="radious-icon" [icon]="faMailBulk"></fa-icon>
+                    </div>
+                </div>
+                <div class="task-title d-flex">
+                    <div class="log-out-button">
+                        <button (click)="logOut()" class="sign-button">
+                            Cerrar sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="title">
+    Formulario de registro de moneda
+</div>
+<form class="login-input-box" [formGroup]="newCurrencyForm" (ngSubmit)="onSubmit()">
+    <input style="width: 80%;" formControlName="name" type="text" placeholder="Nombre de la moneda" />
+    <div *ngIf="newCurrencyForm.get('name')?.hasError('required') && newCurrencyForm.get('name')?.touched" class="text-danger">
+        <span>
+            Este campo es <strong>obligatorio*</strong>
+        </span>
+    </div>
+    <input style="width: 80%;" formControlName="symbol" type="text" placeholder="Simbolo" />
+    <div *ngIf="newCurrencyForm.get('symbol')?.hasError('required') && newCurrencyForm.get('symbol')?.touched" class="text-danger">
+        <span>
+            Este campo es <strong>obligatorio*</strong>
+        </span>
+    </div>
+    <input style="width: 80%;" formControlName="value" type="text" placeholder="Valor actual" />
+    <div *ngIf="newCurrencyForm.get('value')?.hasError('required') && newCurrencyForm.get('value')?.touched" class="text-danger">
+        <span>
+            Este campo es <strong>obligatorio*</strong>
+        </span>
+    </div>
+    <button class="sign-button">
+        Registrar
+    </button>
+</form>

@@ -1,0 +1,73 @@
+.profile-bar {
+    background-color: #2C2A29;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    height: 60px;
+    -webkit-box-shadow: 0 5px 7px rgb(0 0 0 / 28%) !important;
+    box-shadow: 0 7px 7px rgb(0 0 0 / 28%) !important;
+
+    .profile-section {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 100%;
+        margin-left: -20px;
+
+        .profile-button {
+            cursor: pointer;
+            fa-icon {
+                color: white;
+                padding: 6px 10px;
+                color: #2C2A29;
+                border-radius: 50%;
+                border: 1px solid white;
+                font-weight: 100 !important;
+            }
+            .absolute-user-list {
+                margin-top: 10px;
+                margin-left: -190px;
+                border: 1px solid #E5E5E5;
+                color: #2C2A29;
+                position: absolute;
+                width: 230px;
+                background-color: white;
+                .task-title {
+                    cursor: pointer;
+                    border-bottom: 1px solid #E5E5E5;
+                    padding: 0px 20px;
+                    color: #494949;
+
+                    .right-icon {
+                        width: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                    }
+
+                    .log-out-button {
+                        padding: 10px 0px;
+                        display: flex;
+                        justify-content: end;
+                        width: 100%;
+                        .sign-button {
+                            margin-top: 0px !important;
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.radious-icon {
+    padding: 6px 12px;
+    color: #2C2A29;
+    border-radius: 50%;
+    border: 1px solid #2C2A29;
+    font-weight: 100 !important;
+}

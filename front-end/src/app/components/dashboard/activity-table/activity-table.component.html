@@ -1,0 +1,11 @@
+<div class="dashboard-activities">
+    <app-list-currencies-table 
+    (modalState)="setOpenModal($event)" 
+    *ngIf="router === '/dashboard/deviceList'"></app-list-currencies-table>
+    <app-my-currencies 
+    (modalState)="setOpenModal($event)"
+    *ngIf="router === '/dashboard/mycurrencies'"></app-my-currencies>
+    <app-countries *ngIf="router === '/dashboard/countryList'"></app-countries>
+    <app-users *ngIf="router === '/dashboard/usersList'"></app-users>
+</div>
+

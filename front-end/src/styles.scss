@@ -2,6 +2,8 @@
 
 div, h1, h2, h3, h4, h5, h6, span, strong {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .title {
@@ -19,7 +21,64 @@ input {
 
 .text-danger {
     text-align: start;
+    font-size: 13px !important;
     color: red;
     width: 100%;
     padding: 0% 0% 0% 43%;
 }
+
+.d-flex {
+    display: flex !important;
+}
+
+.sign-button {
+    font-family: sans-serif;
+    margin-top: 35px;
+    border: none;
+    cursor: pointer;
+    background-color: #FDDA24;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 16px;
+    width: 98px;
+    height: 38px;
+    &:hover {
+        background-color: #a18a15;
+    }
+}
+
+.table {
+    padding-top: 30px;
+    table {
+        border-spacing: 0px !important;
+        width: 100%;
+        thead{
+            tr {
+                &:first-child {
+                    background-color: #F4F4F4;
+                    font-weight: 600;
+                    font-size: 16px;
+                    td {
+                        border-bottom: 1.5px solid #2c2a2998 !important;
+                    }
+                }
+                td {
+                    padding: 20px 0px 20px 50px;
+                    border-bottom: 1px solid #DEDEDE;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 20px 0px 20px 50px;
+                    border-bottom: 1px solid #DEDEDE;
+                    &:last-child {
+                        padding: 20px 50px 20px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,25 @@
+.title-add-button {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.my-currencies-title {
+    width: 50%;
+}
+
+.button-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+
+    .radious-icon {
+        width: 17.33px;
+        height: 19.5px;
+        font-size: 24px;
+    }
+}
+
+.options-section {
+    justify-content: end;
+}

@@ -1,0 +1,21 @@
+<div class="title">
+    Añadir una moneda a mi lista
+</div>
+<form class="login-input-box" [formGroup]="addCurrencyForm" (ngSubmit)="onSubmit()">
+    <select style="width: 85%;" formControlName="id" type="select" placeholder="Nombre de la moneda">
+        <option def *ngFor="let currencies of availablesCurrencies" 
+        [value]="currencies.id">
+            {{currencies.name}}
+        </option>
+    </select>
+    <input style="width: 80%;" formControlName="inPossession" type="text" placeholder="Valor a comprar" />
+    <div *ngIf="addCurrencyForm.get('inPossession')?.hasError('required') && addCurrencyForm.get('inPossession')?.touched"
+        class="text-danger">
+        <span>
+            Este campo es <strong>obligatorio*</strong>
+        </span>
+    </div>
+    <button class="sign-button">
+        Registrar
+    </button>
+</form>

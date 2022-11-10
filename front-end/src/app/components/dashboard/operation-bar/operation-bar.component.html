@@ -1,0 +1,29 @@
+<div class="operation-bar-container">
+    <div class="start-division"></div>
+    <div class="task-list">
+        <a href="/dashboard/deviceList" [ngClass]="{selected: router === '/dashboard/deviceList'}" class="task-title d-flex">
+            <h3>Listar monedas</h3>
+            <div class="right-icon">
+                <fa-icon class="radious-icon" [icon]="faCoins"></fa-icon>
+            </div>
+        </a>
+        <a href="/dashboard/mycurrencies" [ngClass]="{selected: router === '/dashboard/mycurrencies'}" class="task-title d-flex">
+            <h3>Mis monedas</h3>
+            <div class="right-icon">
+                <fa-icon style="padding: 6px 12px;" class="radious-icon" [icon]="faBitcoinSign"></fa-icon>
+            </div>
+        </a>
+        <a *ngIf="verifyAccess?.role === 'Admin'" href="/dashboard/countryList" [ngClass]="{selected: router === '/dashboard/countryList'}" class="task-title d-flex">
+            <h3>Listar países</h3>
+            <div class="right-icon">
+                <fa-icon class="radious-icon" [icon]="faList"></fa-icon>
+            </div>
+        </a>
+        <a *ngIf="verifyAccess?.role === 'Admin'" href="/dashboard/usersList" [ngClass]="{selected: router === '/dashboard/usersList'}" class="task-title d-flex">
+            <h3>Listar usuarios</h3>
+            <div class="right-icon">
+                <fa-icon class="radious-icon" [icon]="faUser"></fa-icon>
+            </div>
+        </a>
+    </div>
+</div>

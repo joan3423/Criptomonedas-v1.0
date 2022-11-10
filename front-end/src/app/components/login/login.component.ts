@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ConexionService } from '../../services/conexion.service';
 import { Router } from "@angular/router";
 import { Users } from "src/app/models/users";
@@ -13,42 +13,30 @@ import { Users } from "src/app/models/users";
 export class Login {
 
     loginForm: FormGroup;
-    listOfUsers = [];
 
     constructor(
         private router: Router,
-        private ConexionService: ConexionService,
         private fb: FormBuilder,
         private _newLogin: ConexionService) {
         this.loginForm = this.fb.group({
-            userName: ['', Validators.required],
+            email: ['', Validators.required],
             password: ['', Validators.required]
         })
     }
 
     onSubmit() {
         const newSesion: Users = {
-            userName: this.loginForm.get('userName')?.value,
+            email: this.loginForm.get('email')?.value,
             password: this.loginForm.get('password')?.value
         }
-        this._newLogin.newLogin(newSesion).subscribe(res => {
+        this._newLogin.newLogin(newSesion).subscribe((res: any) => {
+            localStorage.setItem('token', res.token)
+            this.router.navigate(['dashboard/deviceList'])
             console.log(res)
         })
     }
 
-    listarUsuarios() {
-        this.ConexionService.getUsers().subscribe(data => {
-            return this.listOfUsers = data
-        }, error => console.log(error));
-    }
-
     ngOnInit(): void {
-        console.log(this.listOfUsers)
+        console.log(this.loginForm)
     }
-
-    /* newLogin() {
-        const user: Users = (
-            user: user
-        )
-    } */
 }

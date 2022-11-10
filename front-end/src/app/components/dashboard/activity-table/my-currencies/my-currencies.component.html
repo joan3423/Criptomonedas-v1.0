@@ -1,0 +1,65 @@
+<div class="my-currencies-section">
+    <div class="title-add-button d-flex">
+        <div class="title my-currencies-title">
+            Mis monedas
+        </div>
+        <div class="add-device-box">
+            <button (click)="setModalOpen('add-currencies')" class="sign-button add-device-button">
+                AGREGAR MONEDA
+            </button>
+        </div>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        #
+                    </td>
+                    <td>
+                        Símbolo
+                    </td>
+                    <td>
+                        Nombre
+                    </td>
+                    <td>
+                        Tasa de cambio
+                    </td>
+                    <td>
+                        En posesión
+                    </td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let currency of listOwnCurrencies">
+                    <td>
+                        {{currency.id}}
+                    </td>
+                    <td>
+                        {{currency.name}}
+                    </td>
+                    <td>
+                        {{currency.symbol}}
+                    </td>
+                    <td>
+                        {{currency.value}}
+                    </td>
+                    <td>
+                        {{currency.inPossession}}
+                    </td>
+                    <td>
+                        <div class="d-flex options-section">
+                            <button class="button-icon">
+                                <img src="/assets/edit.png">
+                            </button>
+                            <button class="button-icon">
+                                <img src="/assets/trash.png">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

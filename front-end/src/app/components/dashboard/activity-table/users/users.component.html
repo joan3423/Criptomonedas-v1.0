@@ -1,0 +1,49 @@
+<div class="my-currencies-section">
+    <div class="title-add-button d-flex">
+        <div class="title my-currencies-title">
+            Listar usuarios
+        </div>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        #
+                    </td>
+                    <td>
+                        Correo
+                    </td>
+                    <td>
+                        Contraseña
+                    </td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let users of usersList">
+                    <td>
+                        {{users.id}}
+                    </td>
+                    <td>
+                        {{users.email}}
+                    </td>
+                    <td>
+                        {{users.password}}
+                    </td>
+                    <td>
+                        <div class="d-flex options-section">
+                            <button class="button-icon">
+                                <img src="/assets/edit.png">
+                            </button>
+                            <button class="button-icon">
+                                <img src="/assets/trash.png">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
